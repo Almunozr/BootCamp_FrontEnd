@@ -1,57 +1,83 @@
-<!DOCTYPE html><!-- Etiqueta que no necesita cierre, cuya función es facilitar información al servidor web que aloja la página, eseta info se refiere al tipo de documento, además es necesaria para la comunicación entre navegador y servidor -->
+<!DOCTYPE html>
+<!-- Etiqueta que no necesita cierre, cuya función es facilitar información al servidor web que aloja la página, eseta info se refiere al tipo de documento, además es necesaria para la comunicación entre navegador y servidor -->
 <html>
-<head><!-- Etiqueta que define la cabecera del documento y contiene información del mismo(metadatos, scripsts, estilos, ubicación de documentos de estilos, titolo de la página, entre otros. Esto NO ES VISIBLE PARA EL USUALRIO-->  
-	
-	<meta charset="utf-8"><!-- Español -->
-	<meta name="author" content="Alex mi name">
-	<meta name="description">
-	<title >Hola título</title>
+
+<head>
+	<!-- Etiqueta que define la cabecera del documento y contiene información del mismo(metadatos, scripsts, estilos, ubicación de documentos de estilos, titolo de la página, entre otros. Esto NO ES VISIBLE PARA EL USUALRIO-->
+
+	<meta charset="utf-8">
+	<meta name="author" content="Alex M">
+	<meta name="description" content="Uso de etiquetas HTML">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index,follow">
+	<!--Ayuda para el posicionamiento -->
+	<title>Hola título</title>
 	<link rel="icon" href="">
 </head>
 <style>
-	html{
-		scroll-behavior: smooth;/* para que el desplazamiento del scroll sea animado y no directo */
+	html {
+		scroll-behavior: smooth;
+		/* para que el desplazamiento del scroll sea animado y no directo */
 	}
+
 	/* Para seleccionar con comodines (Condiciones/características) */
-	#algunId a[target="_blank"]{ /* Que tenga el atributo con el valor específico - Se puede que tenga el atributo solo*/
+	#algunId a[target="_blank"] {
+		/* Que tenga el atributo con el valor específico - Se puede que tenga el atributo solo*/
 		color: aliceblue;
 	}
-	#algunId a[href*="parte"]{ /* (****)En alguna parte del href contenga el texto "parte"*/
+
+	#algunId a[href*="parte"] {
+		/* (****)En alguna parte del href contenga el texto "parte"*/
 		color: aqua;
-		font-weight: bold; /* Negrita*/
+		font-weight: bold;
+		/* Negrita*/
 	}
-	#algunId a[href^="parte"]{ /* (^^^)Enmpiece el href con el texto "parte"*/
+
+	#algunId a[href^="parte"] {
+		/* (^^^)Enmpiece el href con el texto "parte"*/
 		color: aqua;
-		font-weight:lighter;
+		font-weight: lighter;
 	}
-	#algunId a[href$="parte"]{ /* ($$$)Finaliza el href con el texto "parte"*/
+
+	#algunId a[href$="parte"] {
+		/* ($$$)Finaliza el href con el texto "parte"*/
 		color: aqua;
-		font-weight:lighter;
+		font-weight: lighter;
 	}
+
 	/* Para cuando hay varios valores en los atributos, como en class=" X Y Z" que tiene 3*/
-	#algunId a[class~="cursos"]{ /* (~~~)si cursos se encuntra en la lista de atrubutos de class*/
+	#algunId a[class~="cursos"] {
+		/* (~~~)si cursos se encuntra en la lista de atrubutos de class*/
 		font-style: italic;
 	}
-	#algunId a[class|="cursos"]{ /* si cursos se encuntra en la lista de atrubutos de class y seguido tiene un guión medio - Es decir por ejemplo cursos-algo */
+
+	#algunId a[class|="cursos"] {
+		/* si cursos se encuntra en la lista de atrubutos de class y seguido tiene un guión medio - Es decir por ejemplo cursos-algo */
 		font-style: italic;
 	}
 </style>
 
 
 
-<body><!--(cuerpo del sitio web)Todo lo escrito en esta etiqueta será visible por los navegadores-->
+<body>
+	<!--(cuerpo del sitio web)Todo lo escrito en esta etiqueta será visible por los navegadores-->
 	<header>Cabezote</header>
 	<nav>Barra de navegación</nav><!-- Para Barra de navegación-->
 	<section>sección principal</section><!-- Sección del sitio -->
 	<aside>Columna</aside><!-- Para identificar columnas -->
 	<article>Artículo</article><!-- Escribir artículos -->
-	<h1>h1 Título,</h1><h2>h2</h2><h3>h3</h3><!--Tamaños de títulos-->
-	<p>Estiqueta de párrafo, <b> aquí</b> uso negrita<br>Ahora hay un salto de línea por br</p><!--Parrafo, textos-->
-	<hr ><!-- línea divisora -->
+	<h1>h1 Título,</h1>
+	<h2>h2</h2>
+	<h3>h3</h3>
+	<!--Tamaños de títulos-->
+	<p>Estiqueta de párrafo, <b> aquí</b> uso negrita<br>Ahora hay un salto de línea por br</p>
+	<!--Parrafo, textos-->
+	<hr><!-- línea divisora -->
 	<a href="#">Vínculo</a> <br>
-	<a href="Estructura.html#primeraImagen">Ir a la primera Imagen</a><!--En el mismo documento me lleva donde
+	<a href="Estructura.html#primeraImagen">Ir a la primera Imagen</a>
+	<!--En el mismo documento me lleva donde
 		está indicando con el id de la imagen(Desplaza el scroll) SE DEMORA!!!!! --><br>
-	<a href="Estructura.html#video1" target="_blank">Ir a Videos pero en otra pestaña</a> 
+	<a href="Estructura.html#video1" target="_blank">Ir a Videos pero en otra pestaña</a>
 	<div id="algunId">
 		<a target="_blank" href="#">Vacío</a>
 		<a href="#">Vacío</a>
@@ -60,102 +86,128 @@
 	</div>
 
 
-<!-- Formulario con entradas y demás opciones centrado -->
-<center>
-	<h3>Formulario</h3>
-	<form>
-		<label for="texo">Entrada de texto</label><!-- -->
-		<input id="texto"type="text" placeholder="solo texto" required><!-- required CAMPO REQUERIDO, no se de deja enviar el formulario si no se llena los campos con este atributo -->
-		<br>
+	<!-- Formulario con entradas y demás opciones centrado -->
+	<center>
+		<h3>Formulario</h3>
+		<form>
+			<label for="texo">Entrada de texto</label><!-- -->
+			<input id="texto" type="text" placeholder="solo texto" required>
+			<!-- required CAMPO REQUERIDO, no se de deja enviar el formulario si no se llena los campos con este atributo -->
+			<br>
 
-		<label for="correo">Entrada de correo</label><!-- -->
-		<input id="correo"type="email" placeholder="solo un e-mail">
-		<br>
+			<label for="correo">Entrada de correo</label><!-- -->
+			<input id="correo" type="email" placeholder="solo un e-mail">
+			<br>
 
-		<label for="pass">Entrada de contraseña</label><!-- -->
-		<input id="pass" type="password" placeholder="aquí contraseña ">
-		<br>
-		<br>
-		<label>Opción entre 0 y 100</label>
-		<input type="number" value="1" min="0" max="100">
-		<br>
-		<br>
-		<label>Selecciona la opción correcta</label>
-		<select>
-			<option>Opción 1</option>
-			<option>Opción 2</option>
-			<option>Opción 3</option>
+			<label for="pass">Entrada de contraseña</label><!-- -->
+			<input id="pass" type="password" placeholder="aquí contraseña ">
+			<br>
+			<br>
+			<label>Opción entre 0 y 100</label>
+			<input type="number" value="1" min="0" max="100">
+			<br>
+			<br>
+			<label>Selecciona la opción correcta</label>
+			<select>
+				<option>Opción 1</option>
+				<option>Opción 2</option>
+				<option>Opción 3</option>
 
-		</select>
-		<br>
-		<!-- Cajas de selección -->
-		<input type="checkbox" name="rojo"><label for="rojo">rojo</label>
-		<input type="checkbox" name="amarillo"><label for="amarillo">amarillo</label>
-		<input type="checkbox" name="verde"><label for="verde">verde</label>
-		<br>
-		<br>
-		<!--circulos para chequar 
+			</select>
+			<br>
+			<!-- Cajas de selección -->
+			<input type="checkbox" name="rojo"><label for="rojo">rojo</label>
+			<input type="checkbox" name="amarillo"><label for="amarillo">amarillo</label>
+			<input type="checkbox" name="verde"><label for="verde">verde</label>
+			<br>
+			<br>
+			<!--circulos para chequar 
 			TIENEN EL MISMO "name" entonces sólo se selecciona uno de los 3(hay reemplazamiento) -->
-		<input type="radio" id="blanco" name="radiomismo"><label for="blanco">blanco</label>
-		<input type="radio" id="azul" name="radiomismo"><label for="azul">azul</label>
-		<input type="radio" id="rosado" name="radiomismo"> <label for="rosado">rosado</label>
-		<!-- si a un input le doy el atributo checked queda seleccionado en un principio -->
-		<br>
-		<!-- Para enviar formulario -->
-		<input type="submit" value="Enviar Formulario">
-	</form>
-</center>
+			<input type="radio" id="blanco" name="radiomismo"><label for="blanco">blanco</label>
+			<input type="radio" id="azul" name="radiomismo"><label for="azul">azul</label>
+			<input type="radio" id="rosado" name="radiomismo"> <label for="rosado">rosado</label>
+			<!-- si a un input le doy el atributo checked queda seleccionado en un principio -->
+			<br>
+			<!-- Para enviar formulario -->
+			<input type="submit" value="Enviar Formulario">
+		</form>
+	</center>
 
 
 
-	<img src="../img/prueba1.png"  id="primeraImagen" width="100" height="100" ><!-- Agregar imágen(pero en el aire) -->
-	<figure><!--Ayuda a organizar las imágenes-->
-		<img 	src="../img/prueba1.png" width="100" height="100">
+	<img src="../img/prueba1.png" id="primeraImagen" width="100" height="100"><!-- Agregar imágen(pero en el aire) -->
+	<figure>
+		<!--Ayuda a organizar las imágenes-->
+		<img src="../img/prueba1.png" width="100" height="100">
 	</figure>
 	<figcaption>Pie de página de la img</figcaption>
 
 
-	<ol><!--Conjunto de listas(lista organizada-->
-		<li>Carro</li><!--Item-->
-		<li>Barco</li><!--Item-->
-		<li>Avión</li><!--Item-->
+	<ol>
+		<!--Conjunto de listas(lista organizada-->
+		<li>Carro</li>
+		<!--Item-->
+		<li>Barco</li>
+		<!--Item-->
+		<li>Avión</li>
+		<!--Item-->
 	</ol>
 
 
-	<table border="2"><!--TABLA simple-->
-		<tr><!--fila-->
-			<th>MES</th><!--Columna-->
-			<th>AHORRO</th><!--Columna-->
+	<table border="2">
+		<!--TABLA simple-->
+		<tr>
+			<!--fila-->
+			<th>MES</th>
+			<!--Columna-->
+			<th>AHORRO</th>
+			<!--Columna-->
 		</tr>
 
-		<tr><!--fila-->
-			<th>Enero</th><!--Columna-->
-			<th>$200</th><!--Columna-->
+		<tr>
+			<!--fila-->
+			<th>Enero</th>
+			<!--Columna-->
+			<th>$200</th>
+			<!--Columna-->
 		</tr>
 
-		<tr><!--fila-->
-			<th>Febrero</th><!--Columna-->
-			<th>$700</th><!--Columna-->
+		<tr>
+			<!--fila-->
+			<th>Febrero</th>
+			<!--Columna-->
+			<th>$700</th>
+			<!--Columna-->
 		</tr>
 	</table>
 
-	<table border="2"><!--TABLA dividida en cabecera y cuerpo-->
+	<table border="2">
+		<!--TABLA dividida en cabecera y cuerpo-->
 		<thead>
-			<tr><!--fila-->
-				<th>MES</th><!--Columna-->
-				<th>AHORRO</th><!--Columna-->
+			<tr>
+				<!--fila-->
+				<th>MES</th>
+				<!--Columna-->
+				<th>AHORRO</th>
+				<!--Columna-->
 			</tr>
 		</thead>
 
 		<tbody>
-			<tr><!--fila-->
-				<td>Enero</td><!--Columna (AQUÍ en cuerpo td)-->
-				<td>$200</td><!--Columna-->
+			<tr>
+				<!--fila-->
+				<td>Enero</td>
+				<!--Columna (AQUÍ en cuerpo td)-->
+				<td>$200</td>
+				<!--Columna-->
 			</tr>
 
-			<tr><!--fila-->
-				<td>Febrero</td><!--Columna-->
-				<td>$700</td><!--Columna-->
+			<tr>
+				<!--fila-->
+				<td>Febrero</td>
+				<!--Columna-->
+				<td>$700</td>
+				<!--Columna-->
 			</tr>
 		</tbody>
 	</table>
@@ -167,63 +219,81 @@
 	<p>Andrés: <meter value="94" min="0" max="100" high="90"></meter></p>
 	<p>Ana: <meter value="85" min="0" max="100" high="90"></meter></p>
 	<p>Pedro: <meter value="45" min="0" max="100" high="90"></meter></p>
-<!-- Con etiqueta auxiliar que complementa a meter: progress(no requiere high) -->
+	<!-- Con etiqueta auxiliar que complementa a meter: progress(no requiere high) -->
 	<h1>Resultados de ventas</h1>
 	<p>Enero:<progress value="94" max="100"> </p>
 	<p>Febrero:<progress value="15" max="100"> </p>
 	<p>Marzo:<progress value="38" max="100"> </p>
 
 
-<!--AUDIO -->
-<audio autoplay controls loop preload="metadatos">
-<!--Formatos comunes: .ogg VORBIS; .mp3 ; .wav ; .m4a .m4p .mp4 .acc-->
-	<source src="../audios/cancion1.mp3" type="audio/mp3">
+	<!--AUDIO -->
+	<audio autoplay controls loop preload="metadatos">
+		<!--Formatos comunes: .ogg VORBIS; .mp3 ; .wav ; .m4a .m4p .mp4 .acc-->
+		<source src="../audios/cancion1.mp3" type="audio/mp3">
 
-</audio>
+	</audio>
 
-<!--VIDEO -->
-<video autoplay controls width="500" height="200">
-	<!--Formatos: .ogv ; .mp4 ; .webm ;   -->
-	<source src="../Videos/video1.mp4" type="video/mp4">	
-</video>
-
-
-<!-- Para insertar documentos html, video en linea, mapa, reproductor de sonido en línea...AQUÍ VIDEO YOUTUBE-->
-<h1>holaaaaaaaaaaaaaaaassssssssss</h1>
-<iframe id="video1" width="560" height="315" src="https://www.youtube.com/embed/LXgQm1nTXbw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NMCGAkhWgBQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Ffacultadingenieriamanizales%2Fvideos%2F510425223844101%2F&show_text=false&width=476&t=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></ifram>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NMCGAkhWgBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<!--VIDEO -->
+	<video autoplay controls width="500" height="200">
+		<!--Formatos: .ogv ; .mp4 ; .webm ;   -->
+		<source src="../Videos/video1.mp4" type="video/mp4">
+	</video>
 
 
-<iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Ffacultadingenieriamanizales%2Fvideos%2F510425223844101%2F&show_text=false&width=476&t=0" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>>
-<!-- Sonido de: SOUNDCLOUD para copiar url :incrustrar/embed-->
-<iframe width="25%" height="25%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/201479954&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+	<!-- Para insertar documentos html, video en linea, mapa, reproductor de sonido en línea...AQUÍ VIDEO YOUTUBE-->
+	<h1>holaaaaaaaaaaaaaaaassssssssss</h1>
+	<iframe id="video1" width="560" height="315" src="https://www.youtube.com/embed/LXgQm1nTXbw" frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+		allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/NMCGAkhWgBQ" frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+		allowfullscreen></iframe>
 
-<!-- Revista de Calameo para copiar url :incrustrar/embed --><iframe src="https://es.calameo.com/read/005911753b361b308aea1?page=1" width="480" height="300" frameborder="0" scrolling="no" allowtransparency allowfullscreen style="margin:0 auto;"></iframe>
+	<iframe width="560" height="315"
+		src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Ffacultadingenieriamanizales%2Fvideos%2F510425223844101%2F&show_text=false&width=476&t=0"
+		frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+		allowfullscreen></ifram>
 
-<!-- MAPA -->
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.1055626338351!2d-77.04609227086465!3d1.5157490405667202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2f1852056be0c9%3A0x9c2733a868284371!2sAlban-Belen%2C%20San%20Bernardo%2C%20Nari%C3%B1o!5e0!3m2!1ses!2sco!4v1609535332332!5m2!1ses!2sco" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-<!-- Página web: un blog -->
-<iframe width="560" height="315" src="https://blogger3cero.com/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-
-
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/NMCGAkhWgBQ" title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
 
 
-<footer>Este es el pie de página</footer>
+		<iframe
+			src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Ffacultadingenieriamanizales%2Fvideos%2F510425223844101%2F&show_text=false&width=476&t=0"
+			width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+			allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+			allowFullScreen="true"></iframe>>
+		<!-- Sonido de: SOUNDCLOUD para copiar url :incrustrar/embed-->
+		<iframe width="25%" height="25%" scrolling="no" frameborder="no" allow="autoplay"
+			src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/201479954&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+
+		<!-- Revista de Calameo para copiar url :incrustrar/embed --><iframe
+			src="https://es.calameo.com/read/005911753b361b308aea1?page=1" width="480" height="300" frameborder="0"
+			scrolling="no" allowtransparency allowfullscreen style="margin:0 auto;"></iframe>
+
+		<!-- MAPA -->
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.1055626338351!2d-77.04609227086465!3d1.5157490405667202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2f1852056be0c9%3A0x9c2733a868284371!2sAlban-Belen%2C%20San%20Bernardo%2C%20Nari%C3%B1o!5e0!3m2!1ses!2sco!4v1609535332332!5m2!1ses!2sco"
+			width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+			tabindex="0"></iframe>
+
+		<!-- Página web: un blog -->
+		<iframe width="560" height="315" src="https://blogger3cero.com/" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+
+
+
+
+
+
+		<footer>Este es el pie de página</footer>
 
 
 
 
 </body>
+
 </html>
-
-
-
-
-
